@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-dark: #1a1a1a;
+  --color-brand-red: #b41f24;
+  --color-brand-orange-light: #f9b233;
+  --color-brand-orange-dark: #eb6b21;
+  --color-brand-blue: #1e3a8a; /* Keeping original blue for text readability, but red will be used for accents */
+}
+
+@layer utilities {
+  .bg-orange-gradient {
+    background: linear-gradient(135deg, var(--color-brand-orange-light), var(--color-brand-orange-dark));
+    -webkit-background-clip: padding-box; /* Default */
+  }
+}
+
+/* Specific class for gradient text to ensure compatibility */
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-brand-orange-light), var(--color-brand-orange-dark));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  /* Pause animation on hover */
+  .group:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply font-sans text-gray-900 bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}

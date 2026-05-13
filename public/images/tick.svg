@@ -1,0 +1,5 @@
+<svg viewBox="0 0 500 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="75" r="45" stroke="black" stroke-width="8"/>
+  <path d="M40 75L55 90L140 45" stroke="black" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="125" y="95" font-family="Outfit, sans-serif" font-weight="900" font-size="52" fill="black">One Big Tick</text>
+</svg>
