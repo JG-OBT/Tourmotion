@@ -105,7 +105,7 @@ const Home = () => {
         </div>
         
         <div className="relative group">
-          <div className="flex animate-marquee whitespace-nowrap">
+          <div className="flex animate-marquee whitespace-nowrap w-max">
             {[...CERTIFICATIONS, ...CERTIFICATIONS, ...CERTIFICATIONS, ...CERTIFICATIONS].map((cert, idx) => (
               <a 
                 key={`${cert.name}-${idx}`} 
@@ -115,7 +115,11 @@ const Home = () => {
                 className="mx-12 md:mx-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 hover:scale-105"
               >
                 {cert.logo ? (
-                  <img src={cert.logo} alt={cert.name} className="h-10 md:h-12 w-auto object-contain" />
+                  <img 
+                    src={cert.logo} 
+                    alt={cert.name} 
+                    className={`${cert.name.toLowerCase() === 'alde' ? 'h-6 md:h-8' : 'h-10 md:h-12'} w-auto object-contain`} 
+                  />
                 ) : (
                   <span className="text-2xl md:text-3xl font-black text-gray-300 hover:text-brand-dark transition-colors uppercase tracking-tighter">
                     {cert.name}

@@ -29,7 +29,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ id, title, price, desc
   <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-2xl transition-all duration-300 flex flex-col h-full">
     <div className="h-48 bg-gray-100 relative overflow-hidden">
       <img 
-        src={`https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400&h=250&sig=${id}`} 
+        src={`/images/service-detail-${id}.jpg`} 
         alt={title}
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
       />

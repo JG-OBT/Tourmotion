@@ -55,16 +55,17 @@ const Services = () => {
       </section>
 
       {/* Certifications Row */}
-      <section className="py-12 bg-gray-50 border-y border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60">
-            {['propex', 'dometic', 'thetford', 'truma', 'alde'].map((brand) => (
-              <img 
-                key={brand} 
-                src={`/images/logo-${brand}.png`} 
-                alt={`${brand} logo`} 
-                className="h-8 md:h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" 
-              />
+      <section className="py-12 bg-gray-50 border-y border-gray-100 overflow-hidden">
+        <div className="relative group">
+          <div className="flex animate-marquee whitespace-nowrap w-max">
+            {['propex', 'dometic', 'thetford', 'truma', 'alde', 'whale', 'propex', 'dometic', 'thetford', 'truma', 'alde', 'whale'].map((brand, idx) => (
+              <div key={`${brand}-${idx}`} className="mx-12 md:mx-20 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity">
+                <img 
+                  src={`/images/logo-${brand}.png`} 
+                  alt={`${brand} logo`} 
+                  className={`${brand === 'alde' ? 'h-6 md:h-8' : 'h-8 md:h-12'} w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300`} 
+                />
+              </div>
             ))}
           </div>
         </div>
