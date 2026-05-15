@@ -77,8 +77,7 @@ const Home = () => {
               <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" style={{ animationDelay: '2s' }}></div>
               <div className="relative rounded-3xl overflow-hidden shadow-[0_32px_64px_-12px_rgba(235,107,33,0.3)]">
                 <img 
-                  src="/images/
-                  hero-home.jpg" 
+                  src="/images/hero-home.jpg" 
                   alt="RV Mechanic at work" 
                   className="w-full h-full object-cover"
                 />
