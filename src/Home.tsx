@@ -33,7 +33,7 @@ const Home = () => {
               <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 mb-6">
                 <span className="flex text-brand-orange-dark">
                   {'★'.repeat(5)}
-                </span>hero
+                </span>
                 <span className="text-sm font-bold text-brand-blue uppercase tracking-wider">mobile motorhome and caravan repair service</span>
               </div>
               <h1 className="text-5xl lg:text-7xl font-extrabold text-brand-dark mb-8 leading-[1.1]">
@@ -54,7 +54,7 @@ const Home = () => {
                 </div>
               </h1>
               <p className="text-lg text-gray-600 mb-10 leading-relaxed max-w-xl">
-               Your second home deserves the finest care. We use only the highest quality parts and genuine attention to detail, ensuring your home away from home remains in the best condition possible. Whatever the issue, contact us today to see how we can assist you.  Take the stress out of your holiday and let us bring our mobile service to you.
+                We use high-quality parts, careful attention to detail and offer professional on-site service for caravans, motorhomes and campervans. Wherever you are, TourMotion brings the workshop to you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact" className="bg-orange-gradient text-white px-8 py-4 rounded-full font-bold text-lg text-center shadow-lg hover:shadow-orange-200 transition-all hover:-translate-y-1">

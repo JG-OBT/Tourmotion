@@ -47,7 +47,7 @@ const Services = () => {
               transition={{ duration: 0.8 }}
               className="relative rounded-3xl overflow-hidden shadow-[0_32px_64px_-12px_rgba(235,107,33,0.3)] aspect-[4/3] lg:aspect-square"
             >
-              <img src="/images/services-hero.jpg" alt="Technician working" className="w-full h-full object-cover" />
+              <img src="/images/service-hero.jpg" alt="Technician working" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-brand-blue/10"></div>
             </motion.div>
           </div>
@@ -57,9 +57,14 @@ const Services = () => {
       {/* Certifications Row */}
       <section className="py-12 bg-gray-50 border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale">
-            {['Propex', 'Dometic', 'Thetford', 'Truma', 'Alde'].map((brand) => (
-              <span key={brand} className="text-xl font-black text-gray-500">{brand}</span>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60">
+            {['propex', 'dometic', 'thetford', 'truma', 'alde'].map((brand) => (
+              <img 
+                key={brand} 
+                src={`/images/logo-${brand}.png`} 
+                alt={`${brand} logo`} 
+                className="h-8 md:h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+              />
             ))}
           </div>
         </div>

@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Mail, Phone, Clock, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [formState, setFormState] = React.useState({
     name: '',
     email: '',
@@ -10,11 +11,33 @@ const Contact = () => {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formState);
-    alert('Thank you for your message. We\'ll get back to you as soon as possible!');
-    setFormState({ name: '', email: '', phone: '', message: '' });
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formState),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.message || 'Thank you for your message. We\'ll get back to you as soon as possible!');
+        setFormState({ name: '', email: '', phone: '', message: '' });
+      } else {
+        alert(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Failed to send message. Please check your connection and try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -130,10 +153,11 @@ const Contact = () => {
                 </div>
                 <button 
                   type="submit"
-                  className="w-full bg-orange-gradient text-white py-5 rounded-2xl font-black text-sm uppercase tracking-[0.2em] shadow-lg shadow-brand-orange-light/40 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-3"
+                  disabled={isSubmitting}
+                  className={`w-full bg-orange-gradient text-white py-5 rounded-2xl font-black text-sm uppercase tracking-[0.2em] shadow-lg shadow-brand-orange-light/40 transition-all flex items-center justify-center space-x-3 ${isSubmitting ? 'opacity-70 cursor-not-allowed scale-[0.98]' : 'hover:scale-[1.02] active:scale-[0.98]'}`}
                 >
-                  <span>Send Message</span>
-                  <Send className="w-4 h-4" />
+                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                  <Send className={`w-4 h-4 ${isSubmitting ? 'animate-pulse' : ''}`} />
                 </button>
               </form>
             </motion.div>

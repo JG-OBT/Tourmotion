@@ -105,7 +105,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/images/logo.svg" 
+              src="/images/Logo.svg" 
               alt="TourMotion Logo" 
               className="h-24 w-auto object-contain transition-transform hover:scale-105"
             />

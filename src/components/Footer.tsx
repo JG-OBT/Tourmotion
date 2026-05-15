@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="space-y-6">
             <Link to="/" className="flex items-center">
               <img 
-                src="/images/logo.svg" 
+                src="/images/Logo.svg" 
                 alt="TourMotion Logo" 
                 className="h-20 w-auto object-contain"
               />
