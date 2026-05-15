@@ -9,7 +9,7 @@ const testimonials = [
     role: 'Motorhome Enthusiast',
     text: 'I did not expect such fast and efficient service but that is what I got. James went out of his way to help when I knocked the rear bumper off our motorhome and broke all the wiring to the lights. His level of knowledge, skill and efficiency was exceptional and can thoroughly recommend TourMotion to anyone needing mobile motorhome or caravan repairs.',
     avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100&h=100',
-    image: 'https://images.unsplash.com/photo-1542281134-2e2308731d77?auto=format&fit=crop&q=80&w=800'
+    image: '/images/service-detail-appliance-repair.jpg'
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const testimonials = [
     role: 'Caravan Owner',
     text: 'While staying in our MH at Beverly holiday park in Paignton we had some trouble with our lights and leisure battery, i rang James at Tourmotion who was very knowledgeable and friendly we arranged a time for James to visit where the electrical fault was diagnosed allowing us to finish our holiday, If you have a problem i would recommend calling James first.',
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100&h=100',
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800'
+    image: '/images/service-detail-gas-bottles.jpg'
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const testimonials = [
     role: 'Campervan Owner',
     text: 'James has just fitted a petrol heater in my campervan and was amazing. He listened to what I wanted, talked through the various options, then promptly and efficiently did a great job. He even attended to a couple of minor unrelated issues with the van, along with the way! I cannot recommend him highly enough. Thanks James.',
     avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100&h=100',
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800'
+    image: '/images/service-detail-off-grid.jpg'
   }
 ];
 

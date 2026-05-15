@@ -105,8 +105,8 @@ const Home = () => {
         </div>
         
         <div className="relative group">
-          <div className="flex animate-marquee whitespace-nowrap w-max">
-            {[...CERTIFICATIONS, ...CERTIFICATIONS, ...CERTIFICATIONS, ...CERTIFICATIONS].map((cert, idx) => (
+          <div className="flex animate-marquee whitespace-nowrap">
+            {[...CERTIFICATIONS, ...CERTIFICATIONS, ...CERTIFICATIONS, ...CERTIFICATIONS, ...CERTIFICATIONS, ...CERTIFICATIONS].map((cert, idx) => (
               <a 
                 key={`${cert.name}-${idx}`} 
                 href={cert.url} 
@@ -118,7 +118,7 @@ const Home = () => {
                   <img 
                     src={cert.logo} 
                     alt={cert.name} 
-                    className={`${cert.name.toLowerCase() === 'alde' ? 'h-6 md:h-8' : 'h-10 md:h-12'} w-auto object-contain`} 
+                    className={`${cert.name.toLowerCase() === 'alde' ? 'h-5 md:h-6' : 'h-10 md:h-12'} w-auto object-contain`} 
                   />
                 ) : (
                   <span className="text-2xl md:text-3xl font-black text-gray-300 hover:text-brand-dark transition-colors uppercase tracking-tighter">

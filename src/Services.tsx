@@ -57,13 +57,13 @@ const Services = () => {
       {/* Certifications Row */}
       <section className="py-12 bg-gray-50 border-y border-gray-100 overflow-hidden">
         <div className="relative group">
-          <div className="flex animate-marquee whitespace-nowrap w-max">
-            {['propex', 'dometic', 'thetford', 'truma', 'alde', 'whale', 'propex', 'dometic', 'thetford', 'truma', 'alde', 'whale'].map((brand, idx) => (
+          <div className="flex animate-marquee whitespace-nowrap">
+            {['propex', 'dometic', 'thetford', 'truma', 'alde', 'whale', 'propex', 'dometic', 'thetford', 'truma', 'alde', 'whale', 'propex', 'dometic', 'thetford', 'truma', 'alde', 'whale'].map((brand, idx) => (
               <div key={`${brand}-${idx}`} className="mx-12 md:mx-20 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity">
                 <img 
                   src={`/images/logo-${brand}.png`} 
                   alt={`${brand} logo`} 
-                  className={`${brand === 'alde' ? 'h-6 md:h-8' : 'h-8 md:h-12'} w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300`} 
+                  className={`${brand === 'alde' ? 'h-5 md:h-6' : 'h-8 md:h-12'} w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300`} 
                 />
               </div>
             ))}
